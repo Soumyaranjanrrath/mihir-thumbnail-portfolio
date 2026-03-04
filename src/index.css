@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+.hero-heading {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 1000;
+}
+
+@layer base {
+  :root {
+    /* ── Dark theme ─────────────────────────────────────────── */
+    --background: 0 0% 6%;
+    /* #0f0f0f – main bg        */
+    --foreground: 0 0% 93%;
+    /* #ededed – near-white text */
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 0 0% 93%;
+    /* near-white for primary text */
+    --primary-foreground: 0 0% 6%;
+    /* dark bg for primary-fg usage */
+
+    --secondary: 0 0% 11%;
+    /* #1c1c1c – section alternation */
+    --secondary-foreground: 0 0% 88%;
+
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 55%;
+    /* soft mid-gray for body/sub text */
+
+    --accent: 0 72% 51%;
+    /* red accent – unchanged */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    /* subtle dark border */
+    --input: 0 0% 18%;
+    --ring: 0 72% 51%;
+    /* red ring to match accent */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 70%;
+    --sidebar-primary: 0 0% 93%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+}
